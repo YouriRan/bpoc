@@ -1,0 +1,4550 @@
+{
+   "fftype": "sdk",
+   "head": [{
+         "#": " SPICA "
+      },{
+         "#": " Version history:"
+      },{
+         "#": "    2018.8.30 -- v1: First release of SPICA force field derived from SDK model"
+      },{
+         "#": " Contributers: "
+      },{
+         "#": "    W. Shinoda, R. DeVane, M. L. Klein, C. M. MacDermaid, G. Fiorin, S. Seo"
+      },{
+         "#": " Related papers: "
+      },{
+         "#": "    sdk1 = W. Shinoda, R. DeVane, M. L. Klein, Multi-property Fitting and Parameterization "
+      },{
+         "#": "           of a Coarse Grained Model for Aqueous Surfactants, Mol. Simul. 33 27(2007). "
+      },{
+         "#": "    sdk2 = W. Shinoda, R. DeVane, M. L. Klein, Zwitterionic lipid assemblies: Molecular "
+      },{
+         "#": "           dynamics studies of monolayers, bilayers, and vesicles using a new coarse grain "
+      },{
+         "#": "           force field. J. Phys. Chem. B, 114, 6836 (2010)."
+      },{
+         "#": "    sdk3 = W. Shinoda, R. DeVane, M. L. Klein, Coarse-grained force field for ionic surfactants"
+      },{
+         "#": "           Soft Matter, 7, 6178 (2011)."
+      },{
+         "#": "    mkd  = C. M. MacDermaid, H. K. Kashyap, R. DeVane, W. Shinoda, J. B. Klauda, M. L. Klein, "
+      },{
+         "#": "           and G. Fiorin, Molecular Dynamics Simulations of Cholesterol-Rich Membranes Using "
+      },{
+         "#": "           a Coarse-Grained Force Field for Cyclic Alkanes. J. Chem. Phys. 143, 243144 (2015)."
+      },{
+         "#": "    ss   = S. Seo and W. Shinoda,  SPICA force field for lipid membranes: Domain formation "
+      },{
+         "#": "           induced by cholesterol  submitted."
+      }],
+   "params": [{
+         "param": "bond",
+         "types": ["C2T","CM"],
+         "potential": "harmonic",
+         "k": 19,
+         "r0": 3.1,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["C2T","CM2"],
+         "potential": "harmonic",
+         "k": 110,
+         "r0": 2.54,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["C2T","CT"],
+         "potential": "harmonic",
+         "k": 18,
+         "r0": 3.2,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["C2T","CT2"],
+         "potential": "harmonic",
+         "k": 56,
+         "r0": 2.6,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CM2","CM2"],
+         "potential": "harmonic",
+         "k": 18,
+         "r0": 2.5,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CM2","CT"],
+         "potential": "harmonic",
+         "k": 9,
+         "r0": 3.07,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CM2","CT2"],
+         "potential": "harmonic",
+         "k": 17.4,
+         "r0": 2.538,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CM2","CTB"],
+         "potential": "harmonic",
+         "k": 85,
+         "r0": 2.93,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CM2R","CM2R"],
+         "potential": "harmonic",
+         "k": 179,
+         "r0": 2.32,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CM2R","CMR"],
+         "potential": "harmonic",
+         "k": 228,
+         "r0": 2.3,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CM2R","CTBA"],
+         "potential": "harmonic",
+         "k": 90,
+         "r0": 2.41,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CM2R","OAB"],
+         "potential": "harmonic",
+         "k": 100,
+         "r0": 2.58,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CMB","CMDB"],
+         "potential": "harmonic",
+         "k": 150,
+         "r0": 3.45,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CMB","CMR5"],
+         "potential": "harmonic",
+         "k": 100,
+         "r0": 3,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CMB","CTBA"],
+         "potential": "harmonic",
+         "k": 70,
+         "r0": 3.44,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CMB","CTBB"],
+         "potential": "harmonic",
+         "k": 100,
+         "r0": 3,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CM","CM"],
+         "potential": "harmonic",
+         "k": 6.16,
+         "r0": 3.64,
+         "comment": "# sdk1"
+      },{
+         "param": "bond",
+         "types": ["CM","CM2"],
+         "potential": "harmonic",
+         "k": 9.9,
+         "r0": 3.061,
+         "comment": "# sdk1"
+      },{
+         "param": "bond",
+         "types": ["CM","CT"],
+         "potential": "harmonic",
+         "k": 6.16,
+         "r0": 3.65,
+         "comment": "# sdk1"
+      },{
+         "param": "bond",
+         "types": ["CMD2","CM"],
+         "potential": "harmonic",
+         "k": 8,
+         "r0": 3.03,
+         "comment": "# sdk1"
+      },{
+         "param": "bond",
+         "types": ["CMDB","CMDB"],
+         "potential": "harmonic",
+         "k": 275,
+         "r0": 2.1,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CMDB","CMR"],
+         "potential": "harmonic",
+         "k": 181,
+         "r0": 2.1,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CMDB","CT2"],
+         "potential": "harmonic",
+         "k": 38,
+         "r0": 3.1,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CMDB","CTBA"],
+         "potential": "harmonic",
+         "k": 80,
+         "r0": 2.5,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CMDB","OAB"],
+         "potential": "harmonic",
+         "k": 110,
+         "r0": 3.07,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CM","EO"],
+         "potential": "harmonic",
+         "k": 7.1,
+         "r0": 3.56,
+         "comment": "# sdk1"
+      },{
+         "param": "bond",
+         "types": ["CM","OA"],
+         "potential": "harmonic",
+         "k": 7.5,
+         "r0": 3.01,
+         "comment": "# sdk1"
+      },{
+         "param": "bond",
+         "types": ["CMR5","CTB"],
+         "potential": "harmonic",
+         "k": 78,
+         "r0": 3.14,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CMR5","CTBB"],
+         "potential": "harmonic",
+         "k": 120,
+         "r0": 2.25,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CMR","CTBA"],
+         "potential": "harmonic",
+         "k": 100,
+         "r0": 2.99,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CMR","CTBB"],
+         "potential": "harmonic",
+         "k": 110,
+         "r0": 2.52,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CT2","CM"],
+         "potential": "harmonic",
+         "k": 9,
+         "r0": 3.13,
+         "comment": "# sdk1"
+      },{
+         "param": "bond",
+         "types": ["CT2","EO"],
+         "potential": "harmonic",
+         "k": 10,
+         "r0": 3.07,
+         "comment": "# sdk1"
+      },{
+         "param": "bond",
+         "types": ["CT2","OA"],
+         "potential": "harmonic",
+         "k": 14,
+         "r0": 2.53,
+         "comment": "# sdk1"
+      },{
+         "param": "bond",
+         "types": ["CTB","CTBB"],
+         "potential": "harmonic",
+         "k": 50,
+         "r0": 3.44,
+         "comment": "# mkd"
+      },{
+         "param": "bond",
+         "types": ["CT","CMD2"],
+         "potential": "harmonic",
+         "k": 8,
+         "r0": 3.09,
+         "comment": "# sdk2"
+      },{
+         "param": "bond",
+         "types": ["CT","CT"],
+         "potential": "harmonic",
+         "k": 6.955,
+         "r0": 3.71,
+         "comment": "# sdk1"
+      },{
+         "param": "bond",
+         "types": ["CT","EO"],
+         "potential": "harmonic",
+         "k": 7.1,
+         "r0": 3.61,
+         "comment": "# sdk1"
+      },{
+         "param": "bond",
+         "types": ["CT","OA"],
+         "potential": "harmonic",
+         "k": 6.955,
+         "r0": 3.05,
+         "comment": "# sdk1"
+      },{
+         "param": "bond",
+         "types": ["EO","EO"],
+         "potential": "harmonic",
+         "k": 4.9,
+         "r0": 3.28,
+         "comment": "# sdk1"
+      },{
+         "param": "bond",
+         "types": ["EO","OA"],
+         "potential": "harmonic",
+         "k": 15,
+         "r0": 2.79,
+         "comment": "# sdk1"
+      },{
+         "param": "bond",
+         "types": ["EOT","EO"],
+         "potential": "harmonic",
+         "k": 5.4,
+         "r0": 3.34,
+         "comment": "# sdk1"
+      },{
+         "param": "bond",
+         "types": ["EOT","EOT"],
+         "potential": "harmonic",
+         "k": 5.5,
+         "r0": 3.33,
+         "comment": "# sdk1"
+      },{
+         "param": "bond",
+         "types": ["EST1","CM"],
+         "potential": "harmonic",
+         "k": 4.7,
+         "r0": 3.55,
+         "comment": "# sdk2"
+      },{
+         "param": "bond",
+         "types": ["EST2","CM"],
+         "potential": "harmonic",
+         "k": 5.1,
+         "r0": 3.61,
+         "comment": "# sdk2"
+      },{
+         "param": "bond",
+         "types": ["GL","EST1"],
+         "potential": "harmonic",
+         "k": 30,
+         "r0": 2.88,
+         "comment": "# sdk2"
+      },{
+         "param": "bond",
+         "types": ["GL","EST2"],
+         "potential": "harmonic",
+         "k": 8.4,
+         "r0": 3.48,
+         "comment": "# sdk2"
+      },{
+         "param": "bond",
+         "types": ["NC","PH"],
+         "potential": "harmonic",
+         "k": 4.8,
+         "r0": 4.25,
+         "comment": "# sdk2"
+      },{
+         "param": "bond",
+         "types": ["NH","PHE"],
+         "potential": "harmonic",
+         "k": 9.4,
+         "r0": 3.6,
+         "comment": "# sdk2"
+      },{
+         "param": "bond",
+         "types": ["OA","OA"],
+         "potential": "harmonic",
+         "k": 63,
+         "r0": 2.16,
+         "comment": "# sdk1"
+      },{
+         "param": "bond",
+         "types": ["PH","CM"],
+         "potential": "harmonic",
+         "k": 12,
+         "r0": 3.69,
+         "comment": "# sdk2"
+      },{
+         "param": "bond",
+         "types": ["PHE","GL"],
+         "potential": "harmonic",
+         "k": 8.9,
+         "r0": 3.52,
+         "comment": "# sdk2"
+      },{
+         "param": "bond",
+         "types": ["PH","GL"],
+         "potential": "harmonic",
+         "k": 8.9,
+         "r0": 3.52,
+         "comment": "# sdk2"
+      },{
+         "param": "bond",
+         "types": ["NC","PHS"],
+         "potential": "harmonic",
+         "k": 9,
+         "r0": 4.05,
+         "comment": "# ss"
+      },{
+         "param": "bond",
+         "types": ["GL2","OAD"],
+         "potential": "harmonic",
+         "k": 70,
+         "r0": 2.295,
+         "comment": "# ss"
+      },{
+         "param": "bond",
+         "types": ["GL2","PEP"],
+         "potential": "harmonic",
+         "k": 89,
+         "r0": 2.295,
+         "comment": "# ss"
+      },{
+         "param": "bond",
+         "types": ["GL2","PHS"],
+         "potential": "harmonic",
+         "k": 60,
+         "r0": 3.165,
+         "comment": "# ss"
+      },{
+         "param": "bond",
+         "types": ["CMO","OAD"],
+         "potential": "harmonic",
+         "k": 27.5,
+         "r0": 3.055,
+         "comment": "# ss"
+      },{
+         "param": "bond",
+         "types": ["CM","PEP"],
+         "potential": "harmonic",
+         "k": 14,
+         "r0": 2.855,
+         "comment": "# ss"
+      },{
+         "param": "bond",
+         "types": ["CM","CMO"],
+         "potential": "harmonic",
+         "k": 6.16,
+         "r0": 3.54,
+         "comment": "# ss"
+      },{
+         "param": "bond",
+         "types": ["CMD","CM"],
+         "potential": "harmonic",
+         "k": 7,
+         "r0": 3.33,
+         "comment": "# ss"
+      },{
+         "param": "bond",
+         "types": ["CMD","CMD2"],
+         "potential": "harmonic",
+         "k": 15,
+         "r0": 3.03,
+         "comment": "# ss"
+      },{
+         "param": "bond",
+         "types": ["EST1","CT"],
+         "potential": "harmonic",
+         "k": 4.7,
+         "r0": 3.55,
+         "comment": "# sdk2"
+      },{
+         "param": "bond",
+         "types": ["EST2","CT"],
+         "potential": "harmonic",
+         "k": 5.1,
+         "r0": 3.61,
+         "comment": "# sdk2"
+      },{
+         "param": "bond",
+         "types": ["EST1","CT2"],
+         "potential": "harmonic",
+         "k": 6.5,
+         "r0": 3.13,
+         "comment": "# sdk2"
+      },{
+         "param": "bond",
+         "types": ["EST2","CT2"],
+         "potential": "harmonic",
+         "k": 6.5,
+         "r0": 3.13,
+         "comment": "# sdk2"
+      },{
+         "param": "bond",
+         "types": ["NC4","CM"],
+         "potential": "harmonic",
+         "k": 13,
+         "r0": 3.8,
+         "comment": "# sdk3"
+      },{
+         "param": "bond",
+         "types": ["SO4","CM"],
+         "potential": "harmonic",
+         "k": 11,
+         "r0": 3.63,
+         "comment": "# sdk3"
+      },{
+         "param": "angle",
+         "types": ["C2T","CM2","CTB"],
+         "potential": "sdk",
+         "k": 18,
+         "theta0": 155,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CM2","CM","CM2"],
+         "potential": "sdk",
+         "k": 1.224,
+         "theta0": 175,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CM2","CM2","CT2"],
+         "potential": "sdk",
+         "k": 1.1,
+         "theta0": 170.1,
+         "comment": "# w.s. modified on 10/12/2018"
+      },{
+         "param": "angle",
+         "types": ["CM2","CM","EST1"],
+         "potential": "sdk",
+         "k": 0.9,
+         "theta0": 178,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CM2","CM","EST2"],
+         "potential": "sdk",
+         "k": 0.9,
+         "theta0": 178,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CM2","CTB","CMR5"],
+         "potential": "harmonic",
+         "k": 12.4,
+         "theta0": 117.4,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CM2","CTB","CTBB"],
+         "potential": "sdk",
+         "k": 10,
+         "theta0": 126,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CM2R","CM2R","CM2R"],
+         "potential": "sdk",
+         "k": 1,
+         "theta0": 60,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CM2R","CTBA","CMB"],
+         "potential": "harmonic",
+         "k": 80,
+         "theta0": 112.5,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CM2R","CTBA","CMDB"],
+         "potential": "harmonic",
+         "k": 45,
+         "theta0": 75.9,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CM2R","CTBA","CMR"],
+         "potential": "harmonic",
+         "k": 70,
+         "theta0": 98.7,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CM2R","OAB","CMDB"],
+         "potential": "harmonic",
+         "k": 80,
+         "theta0": 63.9,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CMB","CMDB","CTBA"],
+         "potential": "harmonic",
+         "k": 90,
+         "theta0": 68.6,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CMB","CMDB","OAB"],
+         "potential": "harmonic",
+         "k": 130,
+         "theta0": 146.6,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CMB","CMR5","CTBB"],
+         "potential": "harmonic",
+         "k": 70,
+         "theta0": 67.8,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CMB","CMR5","CTB"],
+         "potential": "harmonic",
+         "k": 176,
+         "theta0": 131.7,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CMB","CTBA","CMDB"],
+         "potential": "harmonic",
+         "k": 50,
+         "theta0": 68.9,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CMB","CTBA","CMR"],
+         "potential": "harmonic",
+         "k": 150,
+         "theta0": 47.8,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CMB","CTBB","CMR5"],
+         "potential": "harmonic",
+         "k": 50,
+         "theta0": 68.2,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CMB","CTBB","CMR"],
+         "potential": "harmonic",
+         "k": 100,
+         "theta0": 56.3,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CMB","CTBB","CTB"],
+         "potential": "sdk",
+         "k": 70,
+         "theta0": 120.7,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CM","CM","CM"],
+         "potential": "sdk",
+         "k": 1.19,
+         "theta0": 173,
+         "comment": "# sdk1"
+      },{
+         "param": "angle",
+         "types": ["CM","CM","CT"],
+         "potential": "sdk",
+         "k": 1.19,
+         "theta0": 175,
+         "comment": "# sdk1"
+      },{
+         "param": "angle",
+         "types": ["CM","CM","EO"],
+         "potential": "sdk",
+         "k": 1.5,
+         "theta0": 172,
+         "comment": "# sdk1"
+      },{
+         "param": "angle",
+         "types": ["CM","CM2","CM"],
+         "potential": "sdk",
+         "k": 1.2,
+         "theta0": 173,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CM","CM2","CT2"],
+         "potential": "sdk",
+         "k": 1.02,
+         "theta0": 179,
+         "comment": "# w.s. modified on 10/12/2018"
+      },{
+         "param": "angle",
+         "types": ["CM","CM","CM2"],
+         "potential": "sdk",
+         "k": 1.4,
+         "theta0": 178,
+         "comment": "# w.s. added on 10/12/2018"
+      },{
+         "param": "angle",
+         "types": ["CT","CM2","CT"],
+         "potential": "sdk",
+         "k": 3,
+         "theta0": 147,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CM","CMD2","CM"],
+         "potential": "sdk",
+         "k": 6,
+         "theta0": 110,
+         "comment": "# sdk2"
+      },{
+         "param": "angle",
+         "types": ["CMD2","CM","CM"],
+         "potential": "sdk",
+         "k": 1.9,
+         "theta0": 161,
+         "comment": "# sdk2"
+      },{
+         "param": "angle",
+         "types": ["CMDB","CMB","CMR5"],
+         "potential": "harmonic",
+         "k": 300,
+         "theta0": 175.6,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CMDB","CMB","CTBA"],
+         "potential": "harmonic",
+         "k": 125,
+         "theta0": 42.5,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CMDB","CMB","CTBB"],
+         "potential": "harmonic",
+         "k": 50,
+         "theta0": 134.2,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CMDB","CTBA","CMR"],
+         "potential": "harmonic",
+         "k": 100,
+         "theta0": 108.6,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CM","EO","CM"],
+         "potential": "sdk",
+         "k": 1.8,
+         "theta0": 171,
+         "comment": "# sdk1"
+      },{
+         "param": "angle",
+         "types": ["CM","EO","EO"],
+         "potential": "sdk",
+         "k": 3.2,
+         "theta0": 146,
+         "comment": "# sdk1"
+      },{
+         "param": "angle",
+         "types": ["CMR5","CMB","CTBA"],
+         "potential": "harmonic",
+         "k": 30,
+         "theta0": 135.8,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CMR5","CMB","CTBB"],
+         "potential": "harmonic",
+         "k": 90,
+         "theta0": 44,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CMR5","CTB","CTBB"],
+         "potential": "harmonic",
+         "k": 300,
+         "theta0": 39.7,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CMR5","CTBB","CTB"],
+         "potential": "sdk",
+         "k": 100,
+         "theta0": 62.7,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CMR","CTBB","CMR5"],
+         "potential": "harmonic",
+         "k": 150,
+         "theta0": 107,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CMR","CTBB","CTB"],
+         "potential": "sdk",
+         "k": 75,
+         "theta0": 110.1,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CT2","CM","CM"],
+         "potential": "sdk",
+         "k": 1.6,
+         "theta0": 172,
+         "comment": "# sdk1"
+      },{
+         "param": "angle",
+         "types": ["CT2","CM","CT2"],
+         "potential": "sdk",
+         "k": 1.7,
+         "theta0": 173,
+         "comment": "# sdk1"
+      },{
+         "param": "angle",
+         "types": ["CT2","CM","EO"],
+         "potential": "sdk",
+         "k": 1.3,
+         "theta0": 178,
+         "comment": "# sdk1"
+      },{
+         "param": "angle",
+         "types": ["CT2","CM","OA"],
+         "potential": "sdk",
+         "k": 1.8,
+         "theta0": 166,
+         "comment": "# sdk1"
+      },{
+         "param": "angle",
+         "types": ["CT2","CM2","CT"],
+         "potential": "sdk",
+         "k": 1.05,
+         "theta0": 180,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CT2","CMD2","CT2"],
+         "potential": "sdk",
+         "k": 12,
+         "theta0": 110,
+         "comment": "# sdk2"
+      },{
+         "param": "angle",
+         "types": ["CT2","EO","CT2"],
+         "potential": "sdk",
+         "k": 2.6,
+         "theta0": 165,
+         "comment": "# sdk1"
+      },{
+         "param": "angle",
+         "types": ["CTBA","CM2R","OAB"],
+         "potential": "harmonic",
+         "k": 50,
+         "theta0": 107.4,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CTBA","CMB","CTBB"],
+         "potential": "harmonic",
+         "k": 40,
+         "theta0": 92.2,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CTBA","CMDB","OAB"],
+         "potential": "harmonic",
+         "k": 40,
+         "theta0": 91.8,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CTBA","CMR","CTBB"],
+         "potential": "harmonic",
+         "k": 30,
+         "theta0": 115,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CTBB","CMR5","CTB"],
+         "potential": "harmonic",
+         "k": 191.3,
+         "theta0": 77.4,
+         "comment": "# mkd"
+      },{
+         "param": "angle",
+         "types": ["CT","CM","CT"],
+         "potential": "sdk",
+         "k": 1.093,
+         "theta0": 175.5,
+         "comment": "# sdk1"
+      },{
+         "param": "angle",
+         "types": ["CT","CMD2","CT"],
+         "potential": "sdk",
+         "k": 7.7,
+         "theta0": 116,
+         "comment": "# sdk2"
+      },{
+         "param": "angle",
+         "types": ["CT","EO","EO"],
+         "potential": "sdk",
+         "k": 2.2,
+         "theta0": 145,
+         "comment": "# sdk1"
+      },{
+         "param": "angle",
+         "types": ["EO","EO","EO"],
+         "potential": "sdk",
+         "k": 3.4,
+         "theta0": 132,
+         "comment": "# sdk1"
+      },{
+         "param": "angle",
+         "types": ["EO","EO","EOT"],
+         "potential": "sdk",
+         "k": 3.5,
+         "theta0": 135,
+         "comment": "# sdk1"
+      },{
+         "param": "angle",
+         "types": ["EO","EO","OA"],
+         "potential": "sdk",
+         "k": 3,
+         "theta0": 131,
+         "comment": "# sdk1"
+      },{
+         "param": "angle",
+         "types": ["EOT","EO","EOT"],
+         "potential": "sdk",
+         "k": 3.5,
+         "theta0": 134,
+         "comment": "# sdk1"
+      },{
+         "param": "angle",
+         "types": ["EST1","CM","CM"],
+         "potential": "sdk",
+         "k": 1,
+         "theta0": 178,
+         "comment": "# sdk2"
+      },{
+         "param": "angle",
+         "types": ["EST1","GL","EST2"],
+         "potential": "sdk",
+         "k": 1,
+         "theta0": 95,
+         "comment": "# sdk2"
+      },{
+         "param": "angle",
+         "types": ["EST2","CM","CM"],
+         "potential": "sdk",
+         "k": 1,
+         "theta0": 178,
+         "comment": "# sdk2"
+      },{
+         "param": "angle",
+         "types": ["GL","EST1","CM"],
+         "potential": "sdk",
+         "k": 0.8,
+         "theta0": 168,
+         "comment": "# sdk2"
+      },{
+         "param": "angle",
+         "types": ["GL","EST2","CM"],
+         "potential": "sdk",
+         "k": 0.8,
+         "theta0": 172,
+         "comment": "# sdk2"
+      },{
+         "param": "angle",
+         "types": ["NC","PH","CM"],
+         "potential": "sdk",
+         "k": 3.3,
+         "theta0": 112,
+         "comment": "# sdk2"
+      },{
+         "param": "angle",
+         "types": ["NC","PH","GL"],
+         "potential": "sdk",
+         "k": 3.1,
+         "theta0": 112,
+         "comment": "# sdk2"
+      },{
+         "param": "angle",
+         "types": ["NH","PHE","GL"],
+         "potential": "sdk",
+         "k": 4,
+         "theta0": 102,
+         "comment": "# sdk2"
+      },{
+         "param": "angle",
+         "types": ["OA","EO","CT2"],
+         "potential": "sdk",
+         "k": 4,
+         "theta0": 146,
+         "comment": "# sdk1"
+      },{
+         "param": "angle",
+         "types": ["OA","EO","OA"],
+         "potential": "sdk",
+         "k": 6.6,
+         "theta0": 131,
+         "comment": "# sdk1"
+      },{
+         "param": "angle",
+         "types": ["PH","CM","CM"],
+         "potential": "sdk",
+         "k": 1.1,
+         "theta0": 178,
+         "comment": "# sdk2"
+      },{
+         "param": "angle",
+         "types": ["PHE","GL","EST1"],
+         "potential": "sdk",
+         "k": 1.4,
+         "theta0": 124,
+         "comment": "# sdk2"
+      },{
+         "param": "angle",
+         "types": ["PHE","GL","EST2"],
+         "potential": "sdk",
+         "k": 2,
+         "theta0": 138,
+         "comment": "# sdk2"
+      },{
+         "param": "angle",
+         "types": ["PH","GL","EST1"],
+         "potential": "sdk",
+         "k": 1.4,
+         "theta0": 124,
+         "comment": "# sdk2"
+      },{
+         "param": "angle",
+         "types": ["PH","GL","EST2"],
+         "potential": "sdk",
+         "k": 2,
+         "theta0": 138,
+         "comment": "# sdk2"
+      },{
+         "param": "angle",
+         "types": ["CM","CM","CMO"],
+         "potential": "sdk",
+         "k": 3.1,
+         "theta0": 157.5,
+         "comment": "# ss"
+      },{
+         "param": "angle",
+         "types": ["CM","CMO","OAD"],
+         "potential": "sdk",
+         "k": 3.5,
+         "theta0": 155.5,
+         "comment": "# ss"
+      },{
+         "param": "angle",
+         "types": ["CM","CM","PEP"],
+         "potential": "sdk",
+         "k": 2,
+         "theta0": 147.5,
+         "comment": "# ss"
+      },{
+         "param": "angle",
+         "types": ["CM","PEP","GL2"],
+         "potential": "sdk",
+         "k": 7,
+         "theta0": 166,
+         "comment": "# ss"
+      },{
+         "param": "angle",
+         "types": ["CMO","OAD","GL2"],
+         "potential": "sdk",
+         "k": 35.5,
+         "theta0": 107.5,
+         "comment": "# ss"
+      },{
+         "param": "angle",
+         "types": ["GL2","PHS","NC"],
+         "potential": "harmonic",
+         "k": 5,
+         "theta0": 113.5,
+         "comment": "# ss"
+      },{
+         "param": "angle",
+         "types": ["OAD","GL2","PEP"],
+         "potential": "sdk",
+         "k": 70,
+         "theta0": 124.1,
+         "comment": "# ss"
+      },{
+         "param": "angle",
+         "types": ["OAD","GL2","PHS"],
+         "potential": "harmonic",
+         "k": 25.6,
+         "theta0": 95.5,
+         "comment": "# ss"
+      },{
+         "param": "angle",
+         "types": ["PEP","GL2","PHS"],
+         "potential": "harmonic",
+         "k": 3.5,
+         "theta0": 145.5,
+         "comment": "# ss"
+      },{
+         "param": "angle",
+         "types": ["CM","CMD","CMD2"],
+         "potential": "sdk",
+         "k": 1.5,
+         "theta0": 141,
+         "comment": "# ss"
+      },{
+         "param": "angle",
+         "types": ["CM","CMD2","CMD"],
+         "potential": "sdk",
+         "k": 2.7,
+         "theta0": 116,
+         "comment": "# ss"
+      },{
+         "param": "angle",
+         "types": ["CMD","CM","CT2"],
+         "potential": "sdk",
+         "k": 1.9,
+         "theta0": 161,
+         "comment": "# ss"
+      },{
+         "param": "angle",
+         "types": ["NC4","CM","CM"],
+         "potential": "sdk",
+         "k": 1,
+         "theta0": 174,
+         "comment": "# sdk3"
+      },{
+         "param": "angle",
+         "types": ["SO4","CM","CM"],
+         "potential": "sdk",
+         "k": 1.1,
+         "theta0": 178,
+         "comment": "# sdk3"
+      },{
+         "param": "dihedral",
+         "types": ["CTBB","CMR5","CTB","CM2"],
+         "potential": "charmm",
+         "k": 2,
+         "n": 2,
+         "d": 105,
+         "comment": "# mkd"
+      },{
+         "param": "pair",
+         "types": ["C2T","C2T"],
+         "potential": "lj9_6",
+         "epsilon": 0.4003,
+         "sigma": 4.8115,
+         "comment": "# mkd"
+      },{
+         "param": "pair",
+         "types": ["C2T","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.409,
+         "sigma": 4.8601,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["C2T","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.297,
+         "sigma": 4.5272,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["C2T","CTB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3819,
+         "sigma": 4.6137,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["C2T","CTBA"],
+         "potential": "lj9_6",
+         "epsilon": 0.2739,
+         "sigma": 4.6137,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["C2T","CTBB"],
+         "potential": "lj9_6",
+         "epsilon": 0.2931,
+         "sigma": 4.6137,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["C2T","OA"],
+         "potential": "lj9_6",
+         "epsilon": 0.4372,
+         "sigma": 4.033,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["C2T","OAB"],
+         "potential": "lj9_6",
+         "epsilon": 0.2906,
+         "sigma": 4.4458,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2","C2T"],
+         "potential": "lj9_6",
+         "epsilon": 0.3766,
+         "sigma": 4.6137,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.336,
+         "sigma": 4.4619,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2","CM2"],
+         "potential": "lj9_6",
+         "epsilon": 0.2688,
+         "sigma": 4.4159,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.2515,
+         "sigma": 4.1951,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.2842,
+         "sigma": 4.461,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2","CMR"],
+         "potential": "lj9_6",
+         "epsilon": 0.2849,
+         "sigma": 4.5736,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.2729,
+         "sigma": 4.5736,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.301,
+         "sigma": 4.4546,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.228,
+         "sigma": 4.3199,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2","CTB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3219,
+         "sigma": 4.4159,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2","CTBA"],
+         "potential": "lj9_6",
+         "epsilon": 0.2432,
+         "sigma": 4.4159,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2","CTBB"],
+         "potential": "lj9_6",
+         "epsilon": 0.2256,
+         "sigma": 4.4159,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2","OA"],
+         "potential": "lj9_6",
+         "epsilon": 0.3209,
+         "sigma": 3.9373,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2R","C2T"],
+         "potential": "lj9_6",
+         "epsilon": 0.3146,
+         "sigma": 4.3929,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2R","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.4507,
+         "sigma": 4.2401,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2R","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.18,
+         "sigma": 3.9743,
+         "comment": "# mkd"
+      },{
+         "param": "pair",
+         "types": ["CM2R","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.287,
+         "sigma": 4.4342,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2R","CMR"],
+         "potential": "lj9_6",
+         "epsilon": 0.199,
+         "sigma": 4.5672,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2R","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.324,
+         "sigma": 4.4625,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2R","OA"],
+         "potential": "lj9_6",
+         "epsilon": 0.3724,
+         "sigma": 3.9128,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM2","W"],
+         "potential": "lj12_4",
+         "epsilon": 0.2788,
+         "sigma": 4.1722,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM4","CM2"],
+         "potential": "lj9_6",
+         "epsilon": 0.4149,
+         "sigma": 4.5225,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM4","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.4815,
+         "sigma": 4.4944,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM4","CM4"],
+         "potential": "lj9_6",
+         "epsilon": 0.5586,
+         "sigma": 4.6412,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM4","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.4815,
+         "sigma": 4.4944,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM4","CTBA"],
+         "potential": "lj9_6",
+         "epsilon": 0.4815,
+         "sigma": 4.4944,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM4","CTBB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4815,
+         "sigma": 4.4944,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM4","W"],
+         "potential": "lj12_4",
+         "epsilon": 0.4182,
+         "sigma": 4.6604,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMB","C2T"],
+         "potential": "lj9_6",
+         "epsilon": 0.3722,
+         "sigma": 4.6587,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMB","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.2478,
+         "sigma": 4.506,
+         "comment": "# mkd"
+      },{
+         "param": "pair",
+         "types": ["CMB","OA"],
+         "potential": "lj9_6",
+         "epsilon": 0.365,
+         "sigma": 3.987,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM","C2T"],
+         "potential": "lj9_6",
+         "epsilon": 0.391,
+         "sigma": 4.5455,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.42,
+         "sigma": 4.506,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["CM","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4981,
+         "sigma": 4.506,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM","CMR"],
+         "potential": "lj9_6",
+         "epsilon": 0.4899,
+         "sigma": 4.6187,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.4946,
+         "sigma": 4.6187,
+         "comment": "# "
+      },{
+         "param": "pair",
+         "types": ["CMD2","C2T"],
+         "potential": "lj9_6",
+         "epsilon": 0.3286,
+         "sigma": 4.4082,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMD2","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.312,
+         "sigma": 4.2555,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["CMD2","CM2"],
+         "potential": "lj9_6",
+         "epsilon": 0.2541,
+         "sigma": 4.2104,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMD2","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.2052,
+         "sigma": 3.9897,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMD2","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.2537,
+         "sigma": 4.2555,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMD2","CMD2"],
+         "potential": "lj9_6",
+         "epsilon": 0.232,
+         "sigma": 4.005,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["CMD2","CMDB"],
+         "potential": "lj9_6",
+         "epsilon": 0.265,
+         "sigma": 4.5103,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMD2","CMR"],
+         "potential": "lj9_6",
+         "epsilon": 0.2396,
+         "sigma": 4.3681,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMD2","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.2271,
+         "sigma": 4.3681,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMD2","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.33,
+         "sigma": 4.295,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["CMD2","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.269,
+         "sigma": 4.113,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMD2","CTB"],
+         "potential": "lj9_6",
+         "epsilon": 0.2615,
+         "sigma": 4.2104,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMD2","CTBA"],
+         "potential": "lj9_6",
+         "epsilon": 0.3102,
+         "sigma": 4.2104,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMD2","CTBB"],
+         "potential": "lj9_6",
+         "epsilon": 0.311,
+         "sigma": 4.2104,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMD2","EST1"],
+         "potential": "lj9_6",
+         "epsilon": 0.44,
+         "sigma": 4.005,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["CMD2","EST2"],
+         "potential": "lj9_6",
+         "epsilon": 0.44,
+         "sigma": 4.005,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["CMD2","GL"],
+         "potential": "lj9_6",
+         "epsilon": 0.312,
+         "sigma": 4.2555,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["CMD2","W"],
+         "potential": "lj12_4",
+         "epsilon": 0.27,
+         "sigma": 4.188,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["CMDB","C2T"],
+         "potential": "lj9_6",
+         "epsilon": 0.3803,
+         "sigma": 4.9136,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMDB","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.5144,
+         "sigma": 4.7608,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMDB","CM2"],
+         "potential": "lj9_6",
+         "epsilon": 0.318,
+         "sigma": 4.7158,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMDB","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.4767,
+         "sigma": 4.495,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMDB","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4725,
+         "sigma": 4.7608,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMDB","CMDB"],
+         "potential": "lj9_6",
+         "epsilon": 0.2652,
+         "sigma": 5.0157,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMDB","CMR"],
+         "potential": "lj9_6",
+         "epsilon": 0.323,
+         "sigma": 4.5239,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMDB","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.4228,
+         "sigma": 4.8735,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMDB","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.3197,
+         "sigma": 4.8003,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMDB","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.278,
+         "sigma": 4.1944,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMDB","CTB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3174,
+         "sigma": 4.7158,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMDB","CTBA"],
+         "potential": "lj9_6",
+         "epsilon": 0.4426,
+         "sigma": 4.7158,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMDB","CTBB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4481,
+         "sigma": 4.7158,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMDB","EST1"],
+         "potential": "lj9_6",
+         "epsilon": 0.4163,
+         "sigma": 4.6578,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMDB","EST2"],
+         "potential": "lj9_6",
+         "epsilon": 0.4163,
+         "sigma": 4.6578,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMDB","GL"],
+         "potential": "lj9_6",
+         "epsilon": 0.3732,
+         "sigma": 4.7608,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMDB","W"],
+         "potential": "lj12_4",
+         "epsilon": 0.303,
+         "sigma": 4.3114,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CM","OA"],
+         "potential": "lj9_6",
+         "epsilon": 0.365,
+         "sigma": 3.987,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["CMR5","C2T"],
+         "potential": "lj9_6",
+         "epsilon": 0.3482,
+         "sigma": 4.7714,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMR5","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4705,
+         "sigma": 4.6187,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMR5","CMR"],
+         "potential": "lj9_6",
+         "epsilon": 0.4231,
+         "sigma": 4.7313,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMR5","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.2142,
+         "sigma": 4.7313,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMR5","OA"],
+         "potential": "lj9_6",
+         "epsilon": 0.365,
+         "sigma": 3.987,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMR","C2T"],
+         "potential": "lj9_6",
+         "epsilon": 0.3247,
+         "sigma": 4.7714,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMR","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4494,
+         "sigma": 4.6187,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMR","CMR"],
+         "potential": "lj9_6",
+         "epsilon": 0.2142,
+         "sigma": 4.7313,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMR","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.362,
+         "sigma": 4.5528,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMR","CTBA"],
+         "potential": "lj9_6",
+         "epsilon": 0.4153,
+         "sigma": 4.5736,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMR","CTBB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4194,
+         "sigma": 4.5736,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CMR","OA"],
+         "potential": "lj9_6",
+         "epsilon": 0.365,
+         "sigma": 3.987,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CT2","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.362,
+         "sigma": 4.3635,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["CT2","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.2327,
+         "sigma": 4.0976,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CT2","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.2639,
+         "sigma": 4.3635,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CT2","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.249,
+         "sigma": 4.4762,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CT2","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.383,
+         "sigma": 4.403,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["CT2","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.312,
+         "sigma": 4.221,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["CT2","CTB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3634,
+         "sigma": 4.3185,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CT2","CTBA"],
+         "potential": "lj9_6",
+         "epsilon": 0.3374,
+         "sigma": 4.3185,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CT2","CTBB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3314,
+         "sigma": 4.3185,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CT2","OA"],
+         "potential": "lj9_6",
+         "epsilon": 0.38,
+         "sigma": 3.84,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["CTBA","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.4337,
+         "sigma": 4.461,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTBA","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.4347,
+         "sigma": 4.1951,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTBA","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4456,
+         "sigma": 4.461,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTBA","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.3987,
+         "sigma": 4.5736,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTBA","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.388,
+         "sigma": 4.5004,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTBA","CTB"],
+         "potential": "lj9_6",
+         "epsilon": 0.2436,
+         "sigma": 4.4159,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTBA","CTBA"],
+         "potential": "lj9_6",
+         "epsilon": 0.3688,
+         "sigma": 4.4159,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTBA","OA"],
+         "potential": "lj9_6",
+         "epsilon": 0.38,
+         "sigma": 3.84,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTBB","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.4636,
+         "sigma": 4.461,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTBB","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.4287,
+         "sigma": 4.1951,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTBB","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4317,
+         "sigma": 4.461,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTBB","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.4013,
+         "sigma": 4.5736,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTBB","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.3811,
+         "sigma": 4.5004,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTBB","CTB"],
+         "potential": "lj9_6",
+         "epsilon": 0.2294,
+         "sigma": 4.4159,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTBB","CTBA"],
+         "potential": "lj9_6",
+         "epsilon": 0.4614,
+         "sigma": 4.4159,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTBB","CTBB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3688,
+         "sigma": 4.4159,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTBB","OA"],
+         "potential": "lj9_6",
+         "epsilon": 0.38,
+         "sigma": 3.84,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTB","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.3972,
+         "sigma": 4.461,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTB","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.441,
+         "sigma": 4.692,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTB","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.2866,
+         "sigma": 4.461,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTB","CMR"],
+         "potential": "lj9_6",
+         "epsilon": 0.275,
+         "sigma": 4.5736,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTB","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.336,
+         "sigma": 4.7082,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTB","CTB"],
+         "potential": "lj9_6",
+         "epsilon": 0.2688,
+         "sigma": 4.4159,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTB","OA"],
+         "potential": "lj9_6",
+         "epsilon": 0.4372,
+         "sigma": 4.033,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CTB","OAB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3502,
+         "sigma": 4.2479,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CT","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.444,
+         "sigma": 4.5455,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["CT","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.2676,
+         "sigma": 4.2797,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CT","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3035,
+         "sigma": 4.5455,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CT","CMR"],
+         "potential": "lj9_6",
+         "epsilon": 0.4163,
+         "sigma": 4.6582,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CT","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.2863,
+         "sigma": 4.6582,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CT","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.469,
+         "sigma": 4.585,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["CT","CTB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4179,
+         "sigma": 4.5004,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["CT","OA"],
+         "potential": "lj9_6",
+         "epsilon": 0.4372,
+         "sigma": 4.033,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["CT","OAB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3872,
+         "sigma": 4.149,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EO","C2T"],
+         "potential": "lj9_6",
+         "epsilon": 0.41,
+         "sigma": 4.34,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EO","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.377,
+         "sigma": 4.274,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EO","CM2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3218,
+         "sigma": 4.2328,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EO","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.3735,
+         "sigma": 4.2065,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EO","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.377,
+         "sigma": 4.274,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EO","CMDB"],
+         "potential": "lj9_6",
+         "epsilon": 0.377,
+         "sigma": 4.274,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EO","CMR"],
+         "potential": "lj9_6",
+         "epsilon": 0.377,
+         "sigma": 4.274,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EO","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.377,
+         "sigma": 4.274,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EO","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.41,
+         "sigma": 4.34,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["EO","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.37,
+         "sigma": 4.14,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["EO","CTB"],
+         "potential": "lj9_6",
+         "epsilon": 0.41,
+         "sigma": 4.34,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EO","CTBA"],
+         "potential": "lj9_6",
+         "epsilon": 0.37,
+         "sigma": 4.14,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EO","CTBB"],
+         "potential": "lj9_6",
+         "epsilon": 0.37,
+         "sigma": 4.14,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EO","EO"],
+         "potential": "lj9_6",
+         "epsilon": 0.405,
+         "sigma": 4.25,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["EO","EOT"],
+         "potential": "lj9_6",
+         "epsilon": 0.42,
+         "sigma": 4.25,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["EO","OA"],
+         "potential": "lj9_6",
+         "epsilon": 0.44,
+         "sigma": 3.89,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["EO","OAB"],
+         "potential": "lj9_6",
+         "epsilon": 0.44,
+         "sigma": 3.89,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EOT","EOT"],
+         "potential": "lj9_6",
+         "epsilon": 0.437,
+         "sigma": 4.25,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["EST1","C2T"],
+         "potential": "lj9_6",
+         "epsilon": 0.278,
+         "sigma": 4.5557,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EST1","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.47,
+         "sigma": 4.403,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["EST1","CM2"],
+         "potential": "lj9_6",
+         "epsilon": 0.2973,
+         "sigma": 4.3579,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EST1","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.3284,
+         "sigma": 4.1372,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EST1","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4511,
+         "sigma": 4.403,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EST1","CMR"],
+         "potential": "lj9_6",
+         "epsilon": 0.3959,
+         "sigma": 4.5156,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EST1","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.4039,
+         "sigma": 4.5156,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EST1","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.47,
+         "sigma": 4.4425,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["EST1","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.39,
+         "sigma": 4.2605,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["EST1","CTB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3556,
+         "sigma": 4.3579,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EST1","CTBA"],
+         "potential": "lj9_6",
+         "epsilon": 0.4466,
+         "sigma": 4.3579,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EST1","CTBB"],
+         "potential": "lj9_6",
+         "epsilon": 0.435,
+         "sigma": 4.3579,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EST1","EST1"],
+         "potential": "lj9_6",
+         "epsilon": 0.495,
+         "sigma": 4.3,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["EST1","EST2"],
+         "potential": "lj9_6",
+         "epsilon": 0.495,
+         "sigma": 4.3,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["EST1","NC"],
+         "potential": "lj9_6",
+         "epsilon": 0.75,
+         "sigma": 4.475,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["EST1","PH"],
+         "potential": "lj9_6",
+         "epsilon": 0.5,
+         "sigma": 4.55,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["EST1","W"],
+         "potential": "lj12_4",
+         "epsilon": 0.82,
+         "sigma": 4.29,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["EST2","C2T"],
+         "potential": "lj9_6",
+         "epsilon": 0.278,
+         "sigma": 4.5557,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EST2","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.47,
+         "sigma": 4.403,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["EST2","CM2"],
+         "potential": "lj9_6",
+         "epsilon": 0.2973,
+         "sigma": 4.3579,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EST2","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.3284,
+         "sigma": 4.1372,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EST2","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4511,
+         "sigma": 4.403,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EST2","CMR"],
+         "potential": "lj9_6",
+         "epsilon": 0.3959,
+         "sigma": 4.5156,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EST2","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.4039,
+         "sigma": 4.5156,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EST2","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.47,
+         "sigma": 4.4425,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["EST2","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.39,
+         "sigma": 4.2605,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EST2","CTB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3556,
+         "sigma": 4.3579,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EST2","CTBA"],
+         "potential": "lj9_6",
+         "epsilon": 0.4466,
+         "sigma": 4.3579,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EST2","CTBB"],
+         "potential": "lj9_6",
+         "epsilon": 0.435,
+         "sigma": 4.3579,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["EST2","EST2"],
+         "potential": "lj9_6",
+         "epsilon": 0.495,
+         "sigma": 4.3,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["EST2","NC"],
+         "potential": "lj9_6",
+         "epsilon": 0.75,
+         "sigma": 4.475,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["EST2","PH"],
+         "potential": "lj9_6",
+         "epsilon": 0.5,
+         "sigma": 4.55,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["EST2","W"],
+         "potential": "lj12_4",
+         "epsilon": 0.82,
+         "sigma": 4.29,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["GL","C2T"],
+         "potential": "lj9_6",
+         "epsilon": 0.3228,
+         "sigma": 4.6587,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["GL","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.42,
+         "sigma": 4.506,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["GL","CM2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3305,
+         "sigma": 4.461,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["GL","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.3268,
+         "sigma": 4.2401,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["GL","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4766,
+         "sigma": 4.506,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["GL","CMR"],
+         "potential": "lj9_6",
+         "epsilon": 0.4488,
+         "sigma": 4.6187,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["GL","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.4459,
+         "sigma": 4.6187,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["GL","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.444,
+         "sigma": 4.5455,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["GL","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.362,
+         "sigma": 4.3635,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["GL","CTB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3161,
+         "sigma": 4.461,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["GL","CTBA"],
+         "potential": "lj9_6",
+         "epsilon": 0.3736,
+         "sigma": 4.461,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["GL","CTBB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3716,
+         "sigma": 4.461,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["GL","EST1"],
+         "potential": "lj9_6",
+         "epsilon": 0.47,
+         "sigma": 4.403,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["GL","EST2"],
+         "potential": "lj9_6",
+         "epsilon": 0.47,
+         "sigma": 4.403,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["GL","GL"],
+         "potential": "lj9_6",
+         "epsilon": 0.42,
+         "sigma": 4.506,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["GL","NC"],
+         "potential": "lj9_6",
+         "epsilon": 0.65,
+         "sigma": 4.62,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["GL","PH"],
+         "potential": "lj9_6",
+         "epsilon": 0.3,
+         "sigma": 4.75,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["GL","W"],
+         "potential": "lj12_4",
+         "epsilon": 0.64,
+         "sigma": 4.4385,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["NC","C2T"],
+         "potential": "lj9_6",
+         "epsilon": 0.2933,
+         "sigma": 4.7527,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NC","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.4,
+         "sigma": 5.128,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["NC","CM2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3242,
+         "sigma": 4.5747,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NC","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.2656,
+         "sigma": 4.3759,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NC","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3205,
+         "sigma": 4.6152,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NC","CMD2"],
+         "potential": "lj9_6",
+         "epsilon": 0.35,
+         "sigma": 4.8775,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NC","CMDB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3226,
+         "sigma": 4.8446,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NC","CMR"],
+         "potential": "lj9_6",
+         "epsilon": 0.3083,
+         "sigma": 4.7166,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NC","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.2855,
+         "sigma": 4.7166,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NC","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.42,
+         "sigma": 5.1675,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["NC","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.32,
+         "sigma": 4.9855,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["NC","CTB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3268,
+         "sigma": 4.5747,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NC","CTBA"],
+         "potential": "lj9_6",
+         "epsilon": 0.3787,
+         "sigma": 4.5747,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NC","CTBB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3896,
+         "sigma": 4.5747,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NC","NC"],
+         "potential": "lj9_6",
+         "epsilon": 0.7,
+         "sigma": 5.75,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["NC","NH"],
+         "potential": "lj9_6",
+         "epsilon": 0.88,
+         "sigma": 5.175,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["NC","PH"],
+         "potential": "lj9_6",
+         "epsilon": 1.15,
+         "sigma": 4.2,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["NC","PHE"],
+         "potential": "lj9_6",
+         "epsilon": 1.15,
+         "sigma": 4.2,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["NC","W"],
+         "potential": "lj12_4",
+         "epsilon": 0.9,
+         "sigma": 4.61,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["NH","OAB"],
+         "potential": "lj9_6",
+         "epsilon": 0.8512,
+         "sigma": 4.1565,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NH","C2T"],
+         "potential": "lj9_6",
+         "epsilon": 0.2925,
+         "sigma": 4.7058,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NH","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.33,
+         "sigma": 4.553,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["NH","CM2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3164,
+         "sigma": 4.5079,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NH","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.2591,
+         "sigma": 4.2871,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NH","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3203,
+         "sigma": 4.553,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NH","CMD2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3,
+         "sigma": 4.3025,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NH","CMDB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3256,
+         "sigma": 4.8079,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NH","CMR"],
+         "potential": "lj9_6",
+         "epsilon": 0.3006,
+         "sigma": 4.6656,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NH","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.2867,
+         "sigma": 4.6656,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NH","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.34,
+         "sigma": 4.5925,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["NH","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.32,
+         "sigma": 4.4105,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["NH","CTB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3247,
+         "sigma": 4.5079,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NH","CTBA"],
+         "potential": "lj9_6",
+         "epsilon": 0.3761,
+         "sigma": 4.5079,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NH","CTBB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4,
+         "sigma": 4.5079,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["NH","EST1"],
+         "potential": "lj9_6",
+         "epsilon": 0.85,
+         "sigma": 4.11,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["NH","EST2"],
+         "potential": "lj9_6",
+         "epsilon": 0.85,
+         "sigma": 4.11,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["NH","GL"],
+         "potential": "lj9_6",
+         "epsilon": 0.75,
+         "sigma": 4.19,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["NH","NH"],
+         "potential": "lj9_6",
+         "epsilon": 1.1,
+         "sigma": 4.6,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["NH","PH"],
+         "potential": "lj9_6",
+         "epsilon": 1.2,
+         "sigma": 3.8,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["NH","PHE"],
+         "potential": "lj9_6",
+         "epsilon": 1.2,
+         "sigma": 3.8,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["NH","W"],
+         "potential": "lj12_4",
+         "epsilon": 0.8,
+         "sigma": 3.95,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["OAB","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.3876,
+         "sigma": 4.293,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["OAB","CM2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3614,
+         "sigma": 4.2479,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["OAB","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.3834,
+         "sigma": 4.0271,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["OAB","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4078,
+         "sigma": 4.293,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["OAB","CMD2"],
+         "potential": "lj9_6",
+         "epsilon": 0.2806,
+         "sigma": 4.0425,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["OAB","CMDB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4002,
+         "sigma": 4.5479,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["OAB","CMR"],
+         "potential": "lj9_6",
+         "epsilon": 0.3821,
+         "sigma": 4.4056,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["OAB","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.3585,
+         "sigma": 4.4056,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["OAB","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3227,
+         "sigma": 4.1505,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["OAB","CTBA"],
+         "potential": "lj9_6",
+         "epsilon": 0.427,
+         "sigma": 4.2479,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["OAB","CTBB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4279,
+         "sigma": 4.2479,
+         "comment": "#"
+      },{
+         "param": "pair",
+         "types": ["OAB","EST1"],
+         "potential": "lj9_6",
+         "epsilon": 0.6319,
+         "sigma": 4.19,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OAB","EST2"],
+         "potential": "lj9_6",
+         "epsilon": 0.6319,
+         "sigma": 4.19,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OAB","GL"],
+         "potential": "lj9_6",
+         "epsilon": 0.3255,
+         "sigma": 4.293,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OAB","NC"],
+         "potential": "lj9_6",
+         "epsilon": 0.8512,
+         "sigma": 4.4235,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OAB","OAB"],
+         "potential": "lj9_6",
+         "epsilon": 1.05,
+         "sigma": 3.713,
+         "comment": "# mkd"
+      },{
+         "param": "pair",
+         "types": ["OAB","PH"],
+         "potential": "lj9_6",
+         "epsilon": 0.7256,
+         "sigma": 4.266,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OAB","W"],
+         "potential": "lj12_4",
+         "epsilon": 1.2,
+         "sigma": 3.95,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OA","CMD2"],
+         "potential": "lj9_6",
+         "epsilon": 0.365,
+         "sigma": 3.859,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OA","CMDB"],
+         "potential": "lj9_6",
+         "epsilon": 0.365,
+         "sigma": 3.987,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OA","OA"],
+         "potential": "lj9_6",
+         "epsilon": 0.4491,
+         "sigma": 3.713,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["OA","OAB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4491,
+         "sigma": 3.713,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PH","C2T"],
+         "potential": "lj9_6",
+         "epsilon": 0.3997,
+         "sigma": 4.5952,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PH","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.3,
+         "sigma": 4.953,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["PH","CM2"],
+         "potential": "lj9_6",
+         "epsilon": 0.4176,
+         "sigma": 4.4172,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PH","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.346,
+         "sigma": 4.2184,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PH","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3882,
+         "sigma": 4.4577,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PH","CMD2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3,
+         "sigma": 4.7025,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PH","CMDB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3967,
+         "sigma": 4.6871,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PH","CMR"],
+         "potential": "lj9_6",
+         "epsilon": 0.3915,
+         "sigma": 4.5591,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PH","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.3847,
+         "sigma": 4.5591,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PH","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.32,
+         "sigma": 4.9925,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["PH","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.28,
+         "sigma": 4.8105,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["PH","CTB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4059,
+         "sigma": 4.4172,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PH","CTBA"],
+         "potential": "lj9_6",
+         "epsilon": 0.4425,
+         "sigma": 4.4172,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PH","CTBB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4332,
+         "sigma": 4.4172,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHE","OAB"],
+         "potential": "lj9_6",
+         "epsilon": 0.7256,
+         "sigma": 4.266,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHE","C2T"],
+         "potential": "lj9_6",
+         "epsilon": 0.4076,
+         "sigma": 4.5952,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHE","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.3,
+         "sigma": 4.953,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["PHE","CM2"],
+         "potential": "lj9_6",
+         "epsilon": 0.4046,
+         "sigma": 4.4172,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHE","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.3549,
+         "sigma": 4.2184,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHE","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3806,
+         "sigma": 4.4577,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHE","CMD2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3,
+         "sigma": 4.7025,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHE","CMDB"],
+         "potential": "lj9_6",
+         "epsilon": 0.388,
+         "sigma": 4.6871,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHE","CMR"],
+         "potential": "lj9_6",
+         "epsilon": 0.3984,
+         "sigma": 4.5591,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHE","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.3787,
+         "sigma": 4.5591,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHE","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.32,
+         "sigma": 4.9925,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["PHE","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.28,
+         "sigma": 4.8105,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["PHE","CTB"],
+         "potential": "lj9_6",
+         "epsilon": 0.414,
+         "sigma": 4.4172,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHE","CTBA"],
+         "potential": "lj9_6",
+         "epsilon": 0.4462,
+         "sigma": 4.4172,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHE","CTBB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4138,
+         "sigma": 4.4172,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHE","EST1"],
+         "potential": "lj9_6",
+         "epsilon": 0.5,
+         "sigma": 4.55,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["PHE","EST2"],
+         "potential": "lj9_6",
+         "epsilon": 0.5,
+         "sigma": 4.55,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["PHE","GL"],
+         "potential": "lj9_6",
+         "epsilon": 0.3,
+         "sigma": 4.75,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["PHE","PHE"],
+         "potential": "lj9_6",
+         "epsilon": 1.4,
+         "sigma": 4.6,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["PHE","W"],
+         "potential": "lj12_4",
+         "epsilon": 1,
+         "sigma": 4.03,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["PH","PH"],
+         "potential": "lj9_6",
+         "epsilon": 1.4,
+         "sigma": 5.4,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["PH","PHE"],
+         "potential": "lj9_6",
+         "epsilon": 1.4,
+         "sigma": 5,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["PH","W"],
+         "potential": "lj12_4",
+         "epsilon": 1,
+         "sigma": 4.03,
+         "comment": "# sdk2"
+      },{
+         "param": "pair",
+         "types": ["W","C2T"],
+         "potential": "lj12_4",
+         "epsilon": 0.36,
+         "sigma": 4.478,
+         "comment": "# mkd"
+      },{
+         "param": "pair",
+         "types": ["W","CM"],
+         "potential": "lj12_4",
+         "epsilon": 0.34,
+         "sigma": 4.4385,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["W","CM2R"],
+         "potential": "lj12_4",
+         "epsilon": 0.314,
+         "sigma": 4.3667,
+         "comment": "# mkd"
+      },{
+         "param": "pair",
+         "types": ["W","CMB"],
+         "potential": "lj12_4",
+         "epsilon": 0.34,
+         "sigma": 4.4385,
+         "comment": "# mkd"
+      },{
+         "param": "pair",
+         "types": ["W","CMR"],
+         "potential": "lj12_4",
+         "epsilon": 0.34,
+         "sigma": 4.4385,
+         "comment": "# mkd"
+      },{
+         "param": "pair",
+         "types": ["W","CMR5"],
+         "potential": "lj12_4",
+         "epsilon": 0.34,
+         "sigma": 4.4385,
+         "comment": "# mkd"
+      },{
+         "param": "pair",
+         "types": ["W","CT"],
+         "potential": "lj12_4",
+         "epsilon": 0.36,
+         "sigma": 4.478,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["W","CT2"],
+         "potential": "lj12_4",
+         "epsilon": 0.29,
+         "sigma": 4.296,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["W","CTB"],
+         "potential": "lj12_4",
+         "epsilon": 0.36,
+         "sigma": 4.478,
+         "comment": "# mkd"
+      },{
+         "param": "pair",
+         "types": ["W","CTBA"],
+         "potential": "lj12_4",
+         "epsilon": 0.29,
+         "sigma": 4.296,
+         "comment": "# mkd"
+      },{
+         "param": "pair",
+         "types": ["W","CTBB"],
+         "potential": "lj12_4",
+         "epsilon": 0.29,
+         "sigma": 4.296,
+         "comment": "# mkd"
+      },{
+         "param": "pair",
+         "types": ["W","EO"],
+         "potential": "lj12_4",
+         "epsilon": 0.57,
+         "sigma": 4.31,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["W","OA"],
+         "potential": "lj12_4",
+         "epsilon": 0.7,
+         "sigma": 3.95,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["W","W"],
+         "potential": "lj12_4",
+         "epsilon": 0.895,
+         "sigma": 4.371,
+         "comment": "# sdk1"
+      },{
+         "param": "pair",
+         "types": ["NC","PHS"],
+         "potential": "lj9_6",
+         "epsilon": 0.575,
+         "sigma": 4.41,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["NC","OAD"],
+         "potential": "lj9_6",
+         "epsilon": 0.2803,
+         "sigma": 3.7852,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["NC","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.546,
+         "sigma": 4.2075,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["NC","GL2"],
+         "potential": "lj9_6",
+         "epsilon": 0.78,
+         "sigma": 4.62,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["NC","CMO"],
+         "potential": "lj9_6",
+         "epsilon": 0.32,
+         "sigma": 4.6152,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHS","PHS"],
+         "potential": "lj9_6",
+         "epsilon": 0.56,
+         "sigma": 5.4,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHS","OAD"],
+         "potential": "lj9_6",
+         "epsilon": 0.3172,
+         "sigma": 4.3287,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHS","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.54,
+         "sigma": 4.2975,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHS","GL2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3,
+         "sigma": 4.275,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHS","CMO"],
+         "potential": "lj9_6",
+         "epsilon": 0.27,
+         "sigma": 4.4577,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHS","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.32,
+         "sigma": 4.9925,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHS","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.28,
+         "sigma": 4.8105,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHS","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.3,
+         "sigma": 4.953,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CM","CMO"],
+         "potential": "lj9_6",
+         "epsilon": 0.42,
+         "sigma": 4.506,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMO","CMO"],
+         "potential": "lj9_6",
+         "epsilon": 0.336,
+         "sigma": 4.2807,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMO","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.3996,
+         "sigma": 4.3182,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMO","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3258,
+         "sigma": 4.1453,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMO","GL2"],
+         "potential": "lj9_6",
+         "epsilon": 0.336,
+         "sigma": 4.2807,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CM","GL2"],
+         "potential": "lj9_6",
+         "epsilon": 0.378,
+         "sigma": 4.0554,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CT","GL2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3996,
+         "sigma": 4.0909,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CT2","GL2"],
+         "potential": "lj9_6",
+         "epsilon": 0.362,
+         "sigma": 3.9272,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OAD","OAD"],
+         "potential": "lj9_6",
+         "epsilon": 0.7186,
+         "sigma": 4.0843,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OAD","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.4372,
+         "sigma": 4.033,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CT","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.3915,
+         "sigma": 4.3675,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OAD","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.38,
+         "sigma": 3.84,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CM","OAD"],
+         "potential": "lj9_6",
+         "epsilon": 0.365,
+         "sigma": 3.987,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CM","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.36,
+         "sigma": 4.328,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMO","OAD"],
+         "potential": "lj9_6",
+         "epsilon": 0.365,
+         "sigma": 3.987,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMO","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.44,
+         "sigma": 3.8952,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CT2","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.2664,
+         "sigma": 4.185,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["GL2","GL2"],
+         "potential": "lj9_6",
+         "epsilon": 0.378,
+         "sigma": 3.6048,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["GL2","OAD"],
+         "potential": "lj9_6",
+         "epsilon": 0.7,
+         "sigma": 4.202,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["GL2","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.414,
+         "sigma": 4.328,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OAD","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.5032,
+         "sigma": 3.9315,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PEP","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 1.4,
+         "sigma": 4.15,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PH","PHS"],
+         "potential": "lj9_6",
+         "epsilon": 1.12,
+         "sigma": 5.4,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PH","OAD"],
+         "potential": "lj9_6",
+         "epsilon": 0.2855,
+         "sigma": 4.3287,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PH","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.432,
+         "sigma": 4.2975,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PH","GL2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3,
+         "sigma": 4.275,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PH","CMO"],
+         "potential": "lj9_6",
+         "epsilon": 0.24,
+         "sigma": 4.953,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHS","EST1"],
+         "potential": "lj9_6",
+         "epsilon": 0.3,
+         "sigma": 4.55,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHS","EST2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3,
+         "sigma": 4.55,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHS","CMD2"],
+         "potential": "lj9_6",
+         "epsilon": 0.27,
+         "sigma": 4.7025,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PHS","GL"],
+         "potential": "lj9_6",
+         "epsilon": 0.27,
+         "sigma": 4.75,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMO","EST1"],
+         "potential": "lj9_6",
+         "epsilon": 0.423,
+         "sigma": 4.403,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMO","EST2"],
+         "potential": "lj9_6",
+         "epsilon": 0.423,
+         "sigma": 4.403,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMO","CMD2"],
+         "potential": "lj9_6",
+         "epsilon": 0.2808,
+         "sigma": 4.2555,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMO","GL"],
+         "potential": "lj9_6",
+         "epsilon": 0.378,
+         "sigma": 4.506,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["GL2","EST1"],
+         "potential": "lj9_6",
+         "epsilon": 0.4326,
+         "sigma": 3.9524,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["GL2","EST2"],
+         "potential": "lj9_6",
+         "epsilon": 0.4326,
+         "sigma": 3.9524,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["GL2","CMD2"],
+         "potential": "lj9_6",
+         "epsilon": 0.2369,
+         "sigma": 3.8049,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["GL2","GL"],
+         "potential": "lj9_6",
+         "epsilon": 0.3984,
+         "sigma": 4.0554,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OAD","EST1"],
+         "potential": "lj9_6",
+         "epsilon": 0.4771,
+         "sigma": 4.1921,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OAD","EST2"],
+         "potential": "lj9_6",
+         "epsilon": 0.4771,
+         "sigma": 4.1921,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OAD","CMD2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3266,
+         "sigma": 4.0446,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OAD","GL"],
+         "potential": "lj9_6",
+         "epsilon": 0.4395,
+         "sigma": 4.2951,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PEP","EST1"],
+         "potential": "lj9_6",
+         "epsilon": 0.5188,
+         "sigma": 4.225,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PEP","EST2"],
+         "potential": "lj9_6",
+         "epsilon": 0.5188,
+         "sigma": 4.225,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PEP","CMD2"],
+         "potential": "lj9_6",
+         "epsilon": 0.2841,
+         "sigma": 4.0775,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["PEP","GL"],
+         "potential": "lj9_6",
+         "epsilon": 0.4779,
+         "sigma": 4.328,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["W","GL2"],
+         "potential": "lj12_4",
+         "epsilon": 0.2872,
+         "sigma": 4.3497,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["W","OAD"],
+         "potential": "lj12_4",
+         "epsilon": 0.38,
+         "sigma": 4.1475,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["W","CMO"],
+         "potential": "lj12_4",
+         "epsilon": 0.48,
+         "sigma": 4.4385,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["W","PEP"],
+         "potential": "lj12_4",
+         "epsilon": 0.6,
+         "sigma": 4.2605,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["W","PHS"],
+         "potential": "lj12_4",
+         "epsilon": 1,
+         "sigma": 4.03,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CM2","OAD"],
+         "potential": "lj9_6",
+         "epsilon": 0.2654,
+         "sigma": 4.2501,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CM2","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.2945,
+         "sigma": 4.2829,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CM2","GL2"],
+         "potential": "lj9_6",
+         "epsilon": 0.2996,
+         "sigma": 4.0103,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CM2","CMO"],
+         "potential": "lj9_6",
+         "epsilon": 0.2352,
+         "sigma": 4.4619,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CM2","PHS"],
+         "potential": "lj9_6",
+         "epsilon": 0.4176,
+         "sigma": 4.4172,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["C2T","GL2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3121,
+         "sigma": 4.2081,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CM2R","GL2"],
+         "potential": "lj9_6",
+         "epsilon": 0.277,
+         "sigma": 3.7896,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMB","GL2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3313,
+         "sigma": 4.0554,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMDB","GL2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3451,
+         "sigma": 4.3102,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMR","GL2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3125,
+         "sigma": 4.1681,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMR5","GL2"],
+         "potential": "lj9_6",
+         "epsilon": 0.2625,
+         "sigma": 4.1681,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CTB","GL2"],
+         "potential": "lj9_6",
+         "epsilon": 0.2846,
+         "sigma": 4.0103,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CTBA","GL2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3929,
+         "sigma": 4.0103,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CTBB","GL2"],
+         "potential": "lj9_6",
+         "epsilon": 0.397,
+         "sigma": 4.0103,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OAB","GL2"],
+         "potential": "lj9_6",
+         "epsilon": 0.2963,
+         "sigma": 3.6589,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["C2T","OAD"],
+         "potential": "lj9_6",
+         "epsilon": 0.2751,
+         "sigma": 4.4479,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CM2R","OAD"],
+         "potential": "lj9_6",
+         "epsilon": 0.3277,
+         "sigma": 4.0293,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMB","OAD"],
+         "potential": "lj9_6",
+         "epsilon": 0.3637,
+         "sigma": 4.2951,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMDB","OAD"],
+         "potential": "lj9_6",
+         "epsilon": 0.3598,
+         "sigma": 4.55,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMR","OAD"],
+         "potential": "lj9_6",
+         "epsilon": 0.3394,
+         "sigma": 4.4078,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMR5","OAD"],
+         "potential": "lj9_6",
+         "epsilon": 0.3883,
+         "sigma": 4.4078,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CTB","OAD"],
+         "potential": "lj9_6",
+         "epsilon": 0.2678,
+         "sigma": 4.2501,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CTBA","OAD"],
+         "potential": "lj9_6",
+         "epsilon": 0.4375,
+         "sigma": 4.2501,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CTBB","OAD"],
+         "potential": "lj9_6",
+         "epsilon": 0.3648,
+         "sigma": 4.2501,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OAB","OAD"],
+         "potential": "lj9_6",
+         "epsilon": 0.6526,
+         "sigma": 3.8986,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["C2T","CMO"],
+         "potential": "lj9_6",
+         "epsilon": 0.2737,
+         "sigma": 4.5455,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CM2R","CMO"],
+         "potential": "lj9_6",
+         "epsilon": 0.3155,
+         "sigma": 4.2401,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMB","CMO"],
+         "potential": "lj9_6",
+         "epsilon": 0.3487,
+         "sigma": 4.506,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMDB","CMO"],
+         "potential": "lj9_6",
+         "epsilon": 0.3601,
+         "sigma": 4.7608,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMR","CMO"],
+         "potential": "lj9_6",
+         "epsilon": 0.3429,
+         "sigma": 4.6187,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMR5","CMO"],
+         "potential": "lj9_6",
+         "epsilon": 0.3462,
+         "sigma": 4.6187,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CTB","CMO"],
+         "potential": "lj9_6",
+         "epsilon": 0.278,
+         "sigma": 4.461,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CTBA","CMO"],
+         "potential": "lj9_6",
+         "epsilon": 0.3036,
+         "sigma": 4.461,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CTBB","CMO"],
+         "potential": "lj9_6",
+         "epsilon": 0.3245,
+         "sigma": 4.461,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OAB","CMO"],
+         "potential": "lj9_6",
+         "epsilon": 0.3488,
+         "sigma": 4.293,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["C2T","PHS"],
+         "potential": "lj9_6",
+         "epsilon": 0.3997,
+         "sigma": 4.5952,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CM2R","PHS"],
+         "potential": "lj9_6",
+         "epsilon": 0.346,
+         "sigma": 4.2184,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMB","PHS"],
+         "potential": "lj9_6",
+         "epsilon": 0.3882,
+         "sigma": 4.4577,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMDB","PHS"],
+         "potential": "lj9_6",
+         "epsilon": 0.3967,
+         "sigma": 4.6871,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMR","PHS"],
+         "potential": "lj9_6",
+         "epsilon": 0.3915,
+         "sigma": 4.5591,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMR5","PHS"],
+         "potential": "lj9_6",
+         "epsilon": 0.3847,
+         "sigma": 4.5591,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CTB","PHS"],
+         "potential": "lj9_6",
+         "epsilon": 0.4059,
+         "sigma": 4.4172,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CTBA","PHS"],
+         "potential": "lj9_6",
+         "epsilon": 0.4425,
+         "sigma": 4.4172,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CTBB","PHS"],
+         "potential": "lj9_6",
+         "epsilon": 0.4332,
+         "sigma": 4.4172,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OAB","PHS"],
+         "potential": "lj9_6",
+         "epsilon": 0.7256,
+         "sigma": 4.266,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["C2T","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.2411,
+         "sigma": 4.4808,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CM2R","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.3619,
+         "sigma": 4.0621,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMB","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.4357,
+         "sigma": 4.328,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMDB","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.3956,
+         "sigma": 4.5829,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMR","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.4006,
+         "sigma": 4.4406,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMR5","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.2801,
+         "sigma": 4.4406,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CTB","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.3016,
+         "sigma": 4.2829,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CTBA","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.4427,
+         "sigma": 4.2829,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CTBB","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.4943,
+         "sigma": 4.2829,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OAB","PEP"],
+         "potential": "lj9_6",
+         "epsilon": 0.9558,
+         "sigma": 3.9315,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CM","CMD"],
+         "potential": "lj9_6",
+         "epsilon": 0.3276,
+         "sigma": 4.4257,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMD","CMD"],
+         "potential": "lj9_6",
+         "epsilon": 0.2436,
+         "sigma": 4.1652,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMD","CMD2"],
+         "potential": "lj9_6",
+         "epsilon": 0.239,
+         "sigma": 4.1652,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMD","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.2825,
+         "sigma": 4.2775,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMD","EST1"],
+         "potential": "lj9_6",
+         "epsilon": 0.462,
+         "sigma": 4.1652,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMD","EST2"],
+         "potential": "lj9_6",
+         "epsilon": 0.462,
+         "sigma": 4.1652,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMD","GL"],
+         "potential": "lj9_6",
+         "epsilon": 0.3276,
+         "sigma": 4.4257,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMD","NC"],
+         "potential": "lj9_6",
+         "epsilon": 0.3675,
+         "sigma": 4.9751,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMD","PH"],
+         "potential": "lj9_6",
+         "epsilon": 0.315,
+         "sigma": 4.7965,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["OAB","CMD"],
+         "potential": "lj9_6",
+         "epsilon": 0.374,
+         "sigma": 4.293,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMD","CM2R"],
+         "potential": "lj9_6",
+         "epsilon": 0.2671,
+         "sigma": 4.2401,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMD","CMDB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3503,
+         "sigma": 4.7608,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMD","CTBA"],
+         "potential": "lj9_6",
+         "epsilon": 0.4082,
+         "sigma": 4.461,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMD","CTBB"],
+         "potential": "lj9_6",
+         "epsilon": 0.4137,
+         "sigma": 4.461,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMD","CMB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3325,
+         "sigma": 4.506,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMD","CMR"],
+         "potential": "lj9_6",
+         "epsilon": 0.3203,
+         "sigma": 4.6187,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMD","CMR5"],
+         "potential": "lj9_6",
+         "epsilon": 0.2965,
+         "sigma": 4.6187,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMD","CTB"],
+         "potential": "lj9_6",
+         "epsilon": 0.3474,
+         "sigma": 4.461,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMD","CM2"],
+         "potential": "lj9_6",
+         "epsilon": 0.3346,
+         "sigma": 4.4619,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMD","C2T"],
+         "potential": "lj9_6",
+         "epsilon": 0.437,
+         "sigma": 4.5455,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["CMD","W"],
+         "potential": "lj12_4",
+         "epsilon": 0.2924,
+         "sigma": 4.2681,
+         "comment": "# ss"
+      },{
+         "param": "pair",
+         "types": ["SOD","SOD"],
+         "potential": "lj12_4",
+         "epsilon": 0.35,
+         "sigma": 4.371,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["CLA","CLA"],
+         "potential": "lj12_4",
+         "epsilon": 0.35,
+         "sigma": 4.371,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["SOD","CLA"],
+         "potential": "lj12_4",
+         "epsilon": 0.895,
+         "sigma": 4.371,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["SOD","W"],
+         "potential": "lj12_4",
+         "epsilon": 0.895,
+         "sigma": 4.371,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["CLA","W"],
+         "potential": "lj12_4",
+         "epsilon": 0.895,
+         "sigma": 4.371,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["CLA","CM"],
+         "potential": "lj12_4",
+         "epsilon": 0.34,
+         "sigma": 4.4385,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["CLA","CT2"],
+         "potential": "lj12_4",
+         "epsilon": 0.29,
+         "sigma": 4.296,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["NC4","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.42,
+         "sigma": 4.76,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["NC4","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.38,
+         "sigma": 4.66,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["NC4","W"],
+         "potential": "lj12_4",
+         "epsilon": 0.95,
+         "sigma": 4.43,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["NC4","CLA"],
+         "potential": "lj12_4",
+         "epsilon": 0.95,
+         "sigma": 4.43,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["NC4","NC4"],
+         "potential": "lj9_6",
+         "epsilon": 0.5,
+         "sigma": 5.95,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["SO4","W"],
+         "potential": "lj12_4",
+         "epsilon": 1.1,
+         "sigma": 4.1,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["SO4","SOD"],
+         "potential": "lj12_4",
+         "epsilon": 1.1,
+         "sigma": 4.1,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["SO4","SO4"],
+         "potential": "lj9_6",
+         "epsilon": 0.7,
+         "sigma": 4.321,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["SOD","CM"],
+         "potential": "lj12_4",
+         "epsilon": 0.34,
+         "sigma": 4.4385,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["SOD","CT"],
+         "potential": "lj12_4",
+         "epsilon": 0.36,
+         "sigma": 4.478,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["SO4","CM"],
+         "potential": "lj9_6",
+         "epsilon": 0.383,
+         "sigma": 4.4135,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["SO4","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.405,
+         "sigma": 4.453,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["NC4","SO4"],
+         "potential": "lj9_6",
+         "epsilon": 0.688,
+         "sigma": 3.87,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["NC4","SOD"],
+         "potential": "lj12_4",
+         "epsilon": 0.95,
+         "sigma": 4.43,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["SO4","CLA"],
+         "potential": "lj12_4",
+         "epsilon": 1.1,
+         "sigma": 4.1,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["NC4","CT"],
+         "potential": "lj9_6",
+         "epsilon": 0.44,
+         "sigma": 4.8,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["SO4","CT2"],
+         "potential": "lj9_6",
+         "epsilon": 0.32,
+         "sigma": 4.338,
+         "comment": "# sdk3"
+      },{
+         "param": "pair",
+         "types": ["CLA","CT"],
+         "potential": "lj12_4",
+         "epsilon": 0.36,
+         "sigma": 4.478,
+         "comment": "# sdk3"
+      }]
+}
