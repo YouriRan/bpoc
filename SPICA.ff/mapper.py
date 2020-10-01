@@ -11,7 +11,10 @@ pdb_in = fileinput.input()
 # Output is printed (stdout) so redirect to .pdb file
 
 import json
-f = open("/home/youriran/bpoc/sims/SPICA.ff/spica/spica_top_dog.json", 'r')
+import os
+dirname = os.path.dirname(__file__)
+spica_top = os.path.join(dirname, 'spica/spica_top_dog.json')
+f = open(spica_top, 'r')
 s = f.read()
 top = json.loads(s)
 dopc = top['topo']['DOPC']
