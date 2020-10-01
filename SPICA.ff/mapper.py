@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# SPICA mapper aa.pdb -> cg.pdb
+# SPICA mapper aa_c36.pdb -> cg.pdb
 # Written by:
 # Youri Ran
 # y.a.ran@umail.leidenuniv.nl
