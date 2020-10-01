@@ -1,0 +1,45 @@
+atom  1   PSM  NC   NC   87.1647  +0.1118033989  U
+atom  2   PSM  PH   PHS  94.9716  -0.1118033989  U
+atom  3   PSM  GL2  GL2  27.0452  0.0  U
+atom  4   PSM  OAD  OAD  30.0260  0.0  U
+atom  5   PSM  C11  CMO  40.0639  0.0  U
+atom  6   PSM  C12  CM   42.0804  0.0  U
+atom  7   PSM  C13  CM   42.0804  0.0  U
+atom  8   PSM  C14  CM   42.0804  0.0  U
+atom  9   PSM  C15  CT   43.0880  0.0  U
+atom  10  PSM  PEP  PEP  43.0247  0.0  U
+atom  11  PSM  C21  CM   42.0804  0.0  U
+atom  12  PSM  C22  CM   42.0804  0.0  U
+atom  13  PSM  C23  CM   42.0804  0.0  U
+atom  14  PSM  C24  CM   42.0804  0.0  U
+atom  15  PSM  C26  CT   43.0880  0.0  U
+
+bond  1   2
+bond  2   3
+bond  3   4
+bond  4   5
+bond  5   6
+bond  6   7
+bond  7   8
+bond  8   9
+bond  3  10
+bond 10  11
+bond 11  12
+bond 12  13
+bond 13  14
+bond 14  15
+
+angle  1   2   3
+angle  2   3   4
+angle  3   4   5
+angle  4   5   6
+angle  5   6   7
+angle  6   7   8
+angle  7   8   9
+angle  2   3  10
+angle  4   3  10
+angle  3  10  11
+angle 10  11  12
+angle 11  12  13
+angle 12  13  14
+angle 13  14  15

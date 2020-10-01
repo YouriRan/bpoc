@@ -1,0 +1,51 @@
+atom  1   DLIP NC   NC   87.1647  +0.1118033989  U
+atom  2   DLIP PH   PH   94.9716  -0.1118033989  U
+atom  3   DLIP GL   GL   41.0725  0.0  U
+atom  4   DLIP EST1 EST1 58.0358  0.0  U
+atom  5   DLIP C11  CM   42.0804  0.0  U
+atom  6   DLIP C12  CM   42.0804  0.0  U
+atom  7   DLIP C13  CMD2 26.0378  0.0  U
+atom  8   DLIP C14  CMD  40.0804  0.0  U
+atom  9   DLIP C15  CM   42.0804  0.0  U
+atom  10  DLIP C16  CT2  29.0615  0.0  U
+atom  11  DLIP EST2 EST2 58.0358  0.0  U
+atom  12  DLIP C21  CM   42.0804  0.0  U
+atom  13  DLIP C22  CM   42.0804  0.0  U
+atom  14  DLIP C23  CMD2 26.0378  0.0  U
+atom  15  DLIP C24  CMD  40.0804  0.0  U
+atom  16  DLIP C25  CM   42.0804  0.0  U
+atom  17  DLIP C26  CT2  29.0615  0.0  U
+
+bond  1   2
+bond  2   3
+bond  3   4
+bond  4   5
+bond  5   6
+bond  6   7
+bond  7   8
+bond  8   9
+bond  9  10
+bond  3  11
+bond 11  12
+bond 12  13
+bond 13  14
+bond 14  15
+bond 15  16
+bond 16  17
+
+angle  1   2   3
+angle  2   3   4
+angle  3   4   5
+angle  4   5   6
+angle  5   6   7
+angle  6   7   8
+angle  7   8   9
+angle  8   9  10
+angle  2   3  11
+angle  4   3  11
+angle  3  11  12
+angle 11  12  13
+angle 12  13  14
+angle 13  14  15
+angle 14  15  16
+angle 15  16  17
