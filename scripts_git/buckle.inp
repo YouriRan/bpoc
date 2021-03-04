@@ -1,0 +1,42 @@
+variable        inputname index 3_eq
+variable        outputname index strain30
+
+# System parameters
+units           real
+boundary        p p p
+newton          off
+atom_style      full
+log             ${outputname}.log
+
+timestep        5
+
+# Read data
+read_data       DATA.FILE
+include         PARM.FILE
+variable        laststep file ${inputname}.dump
+next            laststep
+read_dump       ${inputname}.dump ${laststep} x y z vx vy vz ix iy iz box yes replace yes format native
+
+# Neighbor search settings
+neighbor        2.0 bin
+neigh_modify    delay 5 every 1
+
+# Set ensemble
+fix             1 all nvt temp 303.15 303.15 500.0
+
+# Output settings
+thermo          10000
+thermo_style    custom time temp press pe ke enthalpy evdwl ecoul ebond eangle vol density lx ly lz pxx pyy pzz
+thermo_modify   line multi
+dump            1 all xtc 10000 ${outputname}.xtc 
+dump_modify     1 unwrap yes
+
+# Strain in x, relax in z
+fix		2 all deform 1 x erate -0.0000003 z volume
+reset_timestep	0
+run		200000
+unfix		2
+
+# Write dump
+write_dump      all custom ${outputname}.dump id type x y z vx vy vz ix iy iz
+write_data      ${outputname}.data nocoeff

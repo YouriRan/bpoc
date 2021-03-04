@@ -1,0 +1,205 @@
+tolerance   1.5
+output      4j_3.pdb
+filetype    pdb
+nloop0      10000
+
+# dopc 1300
+# water 30000
+
+structure dopc.pdb
+    # lower outside
+    number 250
+    resnumbers 3
+    inside box -60.0 -80.0 -48.0 60.0 80.0 -28.0
+    atoms 1 2
+        inside box -60.0 -80.0 -48.0 60.0 80.0 -44.0
+    end atoms
+    atoms 10 17
+        inside box -60.0 -80.0 -36.0 60.0 80.0 -28.0
+    end atoms
+end structure
+
+structure dopc.pdb
+    # upper outside
+    number 250
+    resnumbers 3
+    inside box -60.0 -80.0 28.0 60.0 80.0 48.0
+    atoms 1 2
+        inside box -60.0 -80.0 44.0 60.0 80.0 48.0
+    end atoms
+    atoms 10 17
+        inside box -60.0 -80.0 28.0 60.0 80.0 36.0
+    end atoms
+end structure
+
+structure dopc.pdb
+    # lower inside left 
+    number 100
+    resnumbers 3
+    inside box -60.0 -80.0 -36.0 -16.0 80.0 -16.0
+    atoms 1 2
+        inside box -60.0 -80.0 -20.0 -16.0 80.0 -16.0
+    end atoms
+    atoms 10 17
+        inside box -60.0 -80.0 -36.0 -16.0 80.0 -28.0
+    end atoms
+end structure
+
+structure dopc.pdb
+    # lower inside right
+    number 100
+    resnumbers 3
+    inside box 16.0 -80.0 -36.0 60.0 80.0 -16.0
+    atoms 1 2
+        inside box 16.0 -80.0 -20.0 60.0 80.0 -16.0
+    end atoms
+    atoms 10 17
+        inside box 16.0 -80.0 -36.0 60.0 80.0 -28.0
+    end atoms
+end structure
+
+structure dopc.pdb
+    # upper inside left
+    number 100
+    resnumbers 3
+    inside box -60.0 -80.0 16.0 -16.0 80.0 36.0
+    atoms 1 2
+        inside box -60.0 -80.0 16.0 -16.0 80.0 20.0
+    end atoms
+    atoms 10 17
+        inside box -60.0 -80.0 28.0 -16.0 80.0 36.0
+    end atoms
+end structure
+
+structure dopc.pdb
+    # upper inside right
+    number 100
+    resnumbers 3
+    inside box 16.0 -80.0 16.0 60.0 80.0 36.0
+    atoms 1 2
+        inside box 16.0 -80.0 16.0 60.0 80.0 20.0
+    end atoms
+    atoms 10 17
+        inside box 16.0 -80.0 28.0 60.0 80.0 36.0
+    end atoms
+end structure
+
+structure dopc.pdb
+    # ridge monolayer right
+    number 100
+    resnumbers 3
+    inside box -16.0 -80.0 -28.0 4.0 80.0 28.0
+    atoms 1 2
+        inside box -16.0 -80.0 -28.0 -12.0 80.0 28.0
+    end atoms
+    atoms 10 17
+        inside box -4.0 -80.0 -28.0 4.0 80.0 28.0
+    end atoms
+end structure
+
+structure dopc.pdb
+    # ridge monolayer right
+    number 100
+    resnumbers 3
+    inside box -4.0 -80.0 -28.0 16.0 80.0 28.0
+    atoms 1 2
+        inside box 12.0 -80.0 -28.0 16.0 80.0 28.0
+    end atoms
+    atoms 10 17
+        inside box -4.0 -80.0 -28.0 4.0 80.0 28.0
+    end atoms
+end structure
+
+structure dopc.pdb
+    # lower left cap
+    number 50
+    resnumbers 3
+    inside box -80.0 -80.0 -48.0 -60.0 80.0 -16.0
+    atoms 1 2
+        outside box -76.0 -80.0 -44.0 -60.0 80.0 -20.0
+    end atoms
+    atoms 10 17
+        inside box -76.0 -80.0 -44.0 -60.0 80.0 -20.0
+    end atoms
+end structure
+
+structure dopc.pdb
+    # lower right cap
+    number 50
+    resnumbers 3
+    inside box 60.0 -80.0 -48.0 80.0 80.0 -16.0
+    atoms 1 2
+        outside box 60.0 -80.0 -44.0 76.0 80.0 -20.0
+    end atoms
+    atoms 10 17
+        inside box 60.0 -80.0 -44.0 76.0 80.0 -20.0
+    end atoms
+end structure
+
+structure dopc.pdb
+    # upper left cap
+    number 50
+    resnumbers 3
+    inside box -80.0 -80.0 16.0 -60.0 80.0 48.0
+    atoms 1 2
+        outside box -76.0 -80.0 20.0 -60.0 80.0 44.0
+    end atoms
+    atoms 10 17
+        inside box -76.0 -80.0 20.0 -60.0 80.0 44.0
+    end atoms
+end structure
+
+structure dopc.pdb
+    # upper right cap
+    number 50
+    resnumbers 3
+    inside box 60.0 -80.0 16.0 80.0 80.0 48.0
+    atoms 1 2
+        outside box 60.0 -80.0 20.0 76.0 80.0 44.0
+    end atoms
+    atoms 10 17
+        inside box 60.0 -80.0 20.0 76.0 80.0 44.0
+    end atoms
+end structure
+
+structure water.pdb
+    # bottom water
+    number 8000
+    resnumbers 3
+    inside box -100.0 -80.0 -72.0 100.0 80.0 -49.0
+end structure
+
+structure water.pdb
+    # top water
+    number 8000
+    resnumbers 3
+    inside box -100.0 -80.0 49.0 100.0 80.0 72.0
+end structure
+
+structure water.pdb
+    # left padding water
+    number 3500
+    resnumbers 3
+    inside box -100.0 -80.0 -48.0 -81.0 80.0 48.0
+end structure
+
+structure water.pdb
+    # left water bulk
+    number 3500
+    resnumbers 3
+    inside box -80.0 -80.0 -15.0 -17.0 80.0 15.0
+end structure
+
+structure water.pdb
+    # right padding water
+    number 3500
+    resnumbers 3
+    inside box 81.0 -80.0 -48.0 100.0 80.0 48.0
+end structure
+
+structure water.pdb
+    # right water bulk
+    number 3500
+    resnumbers 3
+    inside box 17.0 -80.0 -15.0 80.0 80.0 15.0
+end structure
